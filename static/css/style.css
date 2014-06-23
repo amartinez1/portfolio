@@ -15,10 +15,16 @@
   left: 0;
 }
 .percent {
-  display: inline-block;
-  line-height: 110px;
-  z-index: 2;
+
+display: inline-block;
+line-height: 110px;
+z-index: 2;
+/* lo que agregue por Jorge */
+font-size: 17px;
+margin-left: 24px;
+font-weight: bold;
 }
+
 .percent:after {
   content: '%';
   margin-left: 0.1em;
