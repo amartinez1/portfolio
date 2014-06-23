@@ -6,6 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     {% load static %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+
     <link rel="shortcut icon" href="{%static 'ico/favicon.png'%}">
 
     <title>Angel .I Martinez</title>
@@ -17,15 +19,17 @@
     <!-- Custom styles for this template -->
     <link href="{%static 'css/main.css'%}" rel="stylesheet">
 	<link rel="stylesheet" href="{%static 'css/font-awesome.min.css'%}">
+	
+	<script type="text/javascript" src="{%static 'js/jquery.easypiechart.min.js'%}"></script>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
-	<script src= "{% static 'js/Chart.js'%}"></script>
-	<script src="{% static  'js/modernizr.custom.js'%}"></script>
+
 	
 
 	
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -39,12 +43,11 @@
 	<!-- Menu -->
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
-			<h1 class="logo"><a href="index.html#home">Angel</a></h1>
+			<h1 class="logo"><a href="#home">Angel</a></h1>
 			<i class="icon-remove menu-close"></i>
 			<a href="#home" class="smoothScroll">Home</a>
 			<a href="#services" class="smoothScroll">Services</a>
 			<a href="#portfolio" class="smoothScroll">Portfolio</a>
-			<a href="#about" class="smoothScroll">About</a>
 			<a href="#contact" class="smoothScroll">Contact</a>
 			<a href="#"><i class="icon-facebook"></i></a>
 			<a href="#"><i class="icon-twitter"></i></a>
@@ -63,9 +66,16 @@
 	<div id="headerwrap">
 		<div class="container">
 			<br>
-			
-			<h1>Angel .I Martinez</h1>
-			<h2>{ Developer/Graphic Designer }</h2>
+			<div> 
+				<ul>
+					<h1>Angel .I Martinez</h1>
+			<img class = 'img-circle pull-left 'src="{% static 'img/me4.png'%}" alt="" width = '570px' height = '400px' style="">
+				</ul>
+			</div>
+			<p>
+			<h2> I am a Developer Graduated from the University of Puerto Rico with
+			 a Bachelor's Degree in Computer Science. I'm a pragmatic and high quality back-end and
+			  front-end programmer. </h2> </p>
 			<div class="row">
 				<br>
 				<br>
@@ -78,19 +88,11 @@
 	
 	
 	<!-- ========== WHITE SECTION ========== -->
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WELCOME TO <bold>ONASSIS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
-				</h3>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
+
+
 	
 	<!-- ========== SERVICES - GREY SECTION ========== -->
+	<!--
 	<section id="services" name="services"></section>
 	<div id="g">
 		<div class="container">
@@ -119,92 +121,162 @@
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
 				</div>
 			</div>
-		</div><!-- /container -->
-	</div><!-- /g -->
-	
+		</div> /container
+	</div></g>
+	-->
 	<!-- ========== CHARTS - DARK GREY SECTION ========== -->
 	<div id="dg">
+	<div id ="services"></div>
 		<div class="container">
 			<div class="row">
-				<h3>SOME CHARTS</h3>
+				<h3>SKILLS</h3>
 				<br>
 				<br>
-				<div class="col-lg-4" >
 
-					<canvas id="javascript" height="130" width="130"> </canvas>
-					<br>
+				<div class ='col-lg-4'>
+					
 					<h4>Javascript</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 70,
-									color:"#f85c37"
-								},
-								{
-									value : 30,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
-					</script>
+					
+				<span class="chart" data-percent="73">
+					<span class="percent"></span>
+				</span>
 
 				</div>
 				<div class="col-lg-4">
-					<canvas id="bootstrap" height="130" width="130"></canvas>
-					<br>
-					<h4>Bootstrap</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 90,
-									color:"#f85c37"
-								},
-								{
-									value : 10,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("bootstrap").getContext("2d")).Doughnut(doughnutData);
-					</script>
+					
+					<h4>Java </h4>
+					<span class="chart" data-percent="80">
+						<span class="percent"></span>
+					</span>
+					
+
 				</div>
 				<div class="col-lg-4">
-					<canvas id="wordpress" height="130" width="130"></canvas>
-					<br>
-					<h4>Wordpress</h4>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 55,
-									color:"#f85c37"
-								},
-								{
-									value : 45,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("wordpress").getContext("2d")).Doughnut(doughnutData);
-					</script>
+					
+					<h4>Python</h4>
+					<span class="chart" data-percent="80">
+						<span class="percent"></span>
+					</span>
+
+				</div>
+				<div class = 'row'>
+					<div class="col-lg-4">
+					
+					<h4>HTML</h4>
+					<span class="chart" data-percent="100">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+					<div class="col-lg-4">
+					
+					<h4>CSS</h4>
+					<span class="chart" data-percent="100">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+					<div class="col-lg-4">
+					
+					<h4>PHP</h4>
+					<span class="chart" data-percent="45">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+
+				</div>
+				<div class = 'row'>
+					<div class="col-lg-4">
+					
+					<h4>C++</h4>
+					<span class="chart" data-percent="50">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+
+					<div class="col-lg-4">
+					
+					<h4>Visual Basic</h4>
+					<span class="chart" data-percent="65">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+					<div class="col-lg-4">
+					
+					<h4>Django MVC Framework</h4>
+					<span class="chart" data-percent="80">
+						<span class="percent"></span>
+					</span>
+
+					</div>
+					
 				</div>
 			
 			</div>	
 		</div><!-- /container -->
 	</div><!-- /dg -->
+
+				<script type="text/javascript">
+	$(function() {
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		var chart = window.chart = $('.chart').data('easyPieChart');
+		$('.js_update').on('click', function() {
+			chart.update(Math.random()*200-100);
+		});
+	});
+	</script>
 	
 	<section id="portfolio" name="portfolio"></section>
 	<div id="portfoliowrap">
 		<div class="container">
 			<div class="row">
-				<h3>COOL WORKS</h3>
+				<h3>PROYECTS</h3>
 				<br>
 				<br>
-				<div class="col-lg-4 port-space">
-					<a href="item.html"><img src="{%static 'img/work1.png'%}"></a>
+				<div class="col-lg-4 port-space ">
+					<div class = 'thumbnail ' >
+      				<a href="http://www.geo-tire.com/" class="img-responsive">
+         			<img src="{% static 'img/geotire.png'%}" 
+         			alt="Generic placeholder thumbnail">
+      				</a>
+      			 <div class="caption">
+         			<h4><a href="http://www.geo-tire.com/"  target="_blank">Geo-Tire</a></h4>
+         			<p> Award winning best mobile responsive web app, built in less than 24 hours at HackPR.</p>
+         			<p>
+         				<!--
+            			<a href="#" class="btn btn-primary" role="button">
+               			Button
+            			</a> 
+						-->
+        			</p>
+        		</div>
+      			</div>
+
 				</div>
-				<div class="col-lg-4 port-space">
-					<a href="item.html"><img src="{%static 'img/work2.png'%}"></a>
+				<div class="col-lg-4 port-space thumbnail" >
+      				<a href="" class="img-responsive">
+         			alt="Generic placeholder thumbnail">
+      				</a>
+      			 <div class="caption">
+         			<h4><a href=""  target="_blank">3Gramz</a></h4>
+         			<p> ...</p>
+         			<p>
+         				<!--
+            			<a href="#" class="btn btn-primary" role="button">
+               			Button
+            			</a> 
+						-->
+        			</p>
+      			</div>
+
 				</div>
 				<div class="col-lg-4 port-space">
 					<a href="item.html"><img src="{%static 'img/work3.png'%}"></a>
@@ -218,7 +290,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WE WORK HARD TO DELIVER A <bold>HIGH QUALITY SERVICE</bold>. OUR AIM IS YOUR COMPLETE <bold>SATISFACTION</bold>.
+				<h3>I WORK HARD TO DELIVER <bold>HIGH QUALITY APPS</bold>.
 				</h3>
 				</div>
 			</div>
@@ -230,66 +302,7 @@
 	<div id="g">
 		<div class="container">
 			<div class="row">
-				<h3>ABOUT US</h3>
-				<br>
-				<br>
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lectus elit, tincidunt nec turpis sed, accumsan iaculis ipsum. Nulla at augue auctor, tristique erat in, ultricies nunc. Mauris eget metus leo. Ut in mi lacinia, mattis nisl non, ultrices risus. Vestibulum aliquet aliquam ipsum ut ullamcorper. Pellentesque fringilla, massa vel rutrum consequat, nulla velit fermentum dolor, sed scelerisque.</p>
-				<br>
-				<br>
-				</div>
-				<div class="col-lg-2"></div>
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="{%static 'img/team01.jpg'%}" height="90" width="90">
-					<h4>Liz Stewart</h4>
-					<h5><i>Product Manager</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
-				</div>
-
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="{%static 'img/team02.jpg'%}" height="90" width="90">
-					<h4>Brad Casey</h4>
-					<h5><i>Front-end Developer</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
-				</div>
-
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="{%static 'img/team03.jpg'%}" height="90" width="90">
-					<h4>Pamela Chow</h4>
-					<h5><i>Web Designer</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
-				</div>
-
-				<div class="col-lg-3 team">
-					<img class="img-circle" src="{%static 'img/team04.jpg'%}" height="90" width="90">
-					<h4>Tim Gates</h4>
-					<h5><i>Back-end Guru</i></h5>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-					<p>
-						<a href="index.html#"><i class="icon-facebook"></i></a>
-						<a href="index.html#"><i class="icon-twitter"></i></a>
-						<a href="index.html#"><i class="icon-envelope"></i></a>
-
-					</p>
+				
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -300,22 +313,22 @@
 	<div id="f">
 		<div class="container">
 			<div class="row">
-					<h3><b>CONTACT US</b></h3>
+					<h3><b>CONTACT ME</b></h3>
 					<br>
 					<div class="col-lg-4">
-						<h3><b>Send Us A Message:</b></h3>
-						<h3>onassis@blacktie.co</h3>
+						<h3><b>Send me a Message:</b></h3>
+						<h3>angelmartinez.la@gmail.com</h3>
 						<br>
 					</div>
 					
 					<div class="col-lg-4">	
-						<h3><b>Call Us:</b></h3>
-						<h3>+55 3984-4389</h3>
+						<h3><b></b></h3>
+						<h3></h3>
 						<br>
 					</div>
 					
 					<div class="col-lg-4">
-						<h3><b>We Are Social</b></h3>
+						<h3><b>I'm Social!</b></h3>
 						<p>
 							<a href="index.html#"><i class="icon-facebook"></i></a>
 							<a href="index.html#"><i class="icon-twitter"></i></a>
@@ -330,7 +343,6 @@
 	
 	<div id="c">
 		<div class="container">
-			<p>Created by <a href="http://www.blacktie.co">BLACKTIE.CO</a></p>
 		
 		</div>
 	</div>
