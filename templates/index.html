@@ -8,7 +8,6 @@
     {% load static %}
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
 
-    <link rel="shortcut icon" href="{%static 'ico/favicon.png'%}">
 
     <title>Angel .I Martinez</title>
 
@@ -21,8 +20,12 @@
 	<link rel="stylesheet" href="{%static 'css/font-awesome.min.css'%}">
 	
 	<script type="text/javascript" src="{%static 'js/jquery.easypiechart.min.js'%}"></script>
-
-
+	<script type = "text/javascript" src = "{% static 'js/jquery.fittext.js'%}"></script>
+	<script type="text/javascript">
+  	$(document).ready(function(){
+          $("#h1").fitText(1.2);
+ 		 });
+	</script>
 	
 
 	
@@ -68,7 +71,7 @@
 			<br>
 			<div> 
 				<ul>
-					<h1>Angel .I Martinez</h1>
+					<h1 id ='h1'>Angel .I Martínez</h1>
 			<img class = 'img-circle pull-left img-responsive 'src="{% static 'img/me4.png'%}" alt="" width = '570px' height = '400px' style="">
 				</ul>
 			</div>
