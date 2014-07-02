@@ -207,10 +207,10 @@
 					</span>
 
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-2">
 					
-					<h4>Django MVC Framework</h4>
-					<span class="chart" data-percent="80">
+					<h4>C#</h4>
+					<span class="chart" data-percent="60">
 						<span class="percent"></span>
 					</span>
 
@@ -219,17 +219,46 @@
 				</div>
 
 				<div class = 'row'>
-					<div class="col-lg-2">
-					
-						<h4>C#</h4>
-						<span class="chart" data-percent="60">
+					<h3>FRAMEWORKS</h3>
+					<div class="col-lg-3">
+						
+						<h4>Django MVC Framework</h4>
+						<span class="chart2" data-percent="80">
+						<span class="percent"></span>
+						</span>
+
+					</div>
+					<div class="col-lg-3">
+						
+						<h4>Bootstrap</h4>
+						<span class="chart2" data-percent="75">
 						<span class="percent"></span>
 						</span>
 
 					</div>
 					
 				</div>
-			
+
+				<div class = 'row'>
+					<h3>TOOLS</h3>
+					<div class="col-lg-3">
+						
+						<h4>Sublime Text 2</h4>
+						<span class="chart3" data-percent="100">
+						<span class="percent"></span>
+						</span>
+
+					</div>
+					<div class="col-lg-3">
+						
+						<h4>Visual Basic</h4>
+						<span class="chart3" data-percent="70">
+						<span class="percent"></span>
+						</span>
+
+					</div>
+					
+				</div>
 			</div>	
 		</div><!-- /container -->
 	</div><!-- /dg -->
@@ -238,6 +267,22 @@
 	$(function() {
 		$('.chart').easyPieChart({
 			easing: 'easeOutBounce',
+			barColor:'#120AFF',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+
+		$('.chart2').easyPieChart({
+			easing: 'easeOutBounce',
+			barColor:'#39E366',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		$('.chart3').easyPieChart({
+			easing: 'easeOutBounce',
+			barColor:'#F7D514',
 			onStep: function(from, to, percent) {
 				$(this.el).find('.percent').text(Math.round(percent));
 			}
